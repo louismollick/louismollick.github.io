@@ -239,7 +239,7 @@ ul{
   color: rgba(255, 255, 255, 0.281);
 }
 
-.hero-links a:hover, .hero-links a:active,{
+.hero-links a:hover, .hero-links a:active{
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: linear;
