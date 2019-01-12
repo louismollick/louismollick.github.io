@@ -14,7 +14,7 @@
         <form id="course-form">
         <div class="form-group">
             <label for="term">Term</label>
-            <input type="text" id="term" class="form-control">
+            <select id="term" class="form-control"></select>
         </div>
         <div class="form-group">
             <label for="facc">Faculty</label>
@@ -28,9 +28,10 @@
             <label for="crn">CRN</label>
             <input type="text" id="crn" class="form-control">
         </div>
-        <input type="submit" value="Add Course" class="btn btn-primary btn-block">
+        <button type="submit" class="btn btn-primary btn-block">Add Course</button>
         </form>
-        <table class="table table-striped mt-5">
+        <button onClick="window.location.reload()" class="btn btn-primary btn-block mb-2 mt-2">Refresh</button>
+        <table class="table table-striped">
         <thead>
             <tr>
             <th>Term</th>
