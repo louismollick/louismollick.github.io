@@ -105,7 +105,7 @@ function nWindow() { //weird useless security attempt to get url for vsb
 function handleAutoCheck(){ 
     // If auto refresh selected, start refreshing periodically
     if (document.getElementById('auto').checked) {
-        timeOut = setTimeout("location.reload(true);", 3000);
+        timeOut = setTimeout("location.reload(true);", 5000);
     }
 }
 
@@ -288,7 +288,6 @@ document.getElementById('auto').addEventListener('change', function (event) {
     localStorage.setItem('autoCheck', JSON.stringify(this.checked));
 
     if (!(this.checked)){ // Prevent setTimeOut from triggering if auto refresh off
-        console.log('pog')
         clearTimeout(timeOut);
     }
 
