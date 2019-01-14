@@ -86,7 +86,7 @@ function requestNotify(){ // request on DOM load, and if a notify is called and 
 
 function notify(code, seats) {
     let notification = new Notification(`${seats} seats for ${code}!`, {
-        icon: 'omgcat.jpg',
+        icon: '/images/omgcat.jpg',
         body: 'Click me to go to Minerva!',
         requireInteraction: true,
     });
