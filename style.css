@@ -452,12 +452,12 @@ ul{
   border-radius: 10%;
 }
 .mal-icon{
-  background: url('mal-icon.png');
+  background: url('/images/mal-icon.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 .chess-icon{
-  background: url('chess-icon.png');
+  background: url('/images/chess-icon.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
