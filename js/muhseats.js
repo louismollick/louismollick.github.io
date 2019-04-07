@@ -129,17 +129,20 @@ function displayTerms(){
         <option value="${today.getFullYear()+1}09">Fall ${today.getFullYear()+1}</option>
     `;
     let selterm;
+    console.log(today.getMonth());
     if (today.getMonth() >= 0 && today.getMonth() < 3 || today.getMonth() === 11){
         selterm = '01';
     } 
-    else if (today.getMonth() > 3 && today.getMonth() < 8){
+    else if (today.getMonth() >= 3 && today.getMonth() < 8){
         selterm = '05';
     } 
     else if (today.getMonth() > 7 && today.getMonth() != 11){
         selterm = '09';
     }
+    console.log(selterm);
 
     // Select current term
+    console.log(today.getFullYear());
     document.getElementById('term').querySelector(`option[value="${today.getFullYear()}${selterm}"]`).setAttribute("selected", "selected");
 }
 
