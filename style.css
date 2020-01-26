@@ -5,15 +5,7 @@
   --main-text: #fff;
   --second-text: rgb(74, 7, 161);
 }
-/* Small Screens */
-@media (max-width: 600px) {
-  
-}
 
-/* Landscape */
-@media (max-height: 500px) {
-
-}
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 body {
@@ -83,17 +75,33 @@ h3{
   display: -webkit-flex;
   display: grid;
   grid-template-columns: 2fr repeat(4, 1fr);
+  grid-template-areas: "info a b c d";
   grid-gap: 2%;
   align-content: center;
-  justify-content: center;
 }
 
 #info-col{
+  grid-area: info;
   max-width: 30vw;
   text-align: center;
   padding: 1rem;
 }
 
+#content .project:nth-child(2){
+  grid-area: a;
+}
+
+#content .project:nth-child(3){
+  grid-area: b;
+}
+
+#content .project:nth-child(4){
+  grid-area: c;
+}
+
+#content .project:nth-child(5){
+  grid-area: d;
+}
 
 /* PROJECT SECTION */
 
@@ -114,8 +122,6 @@ h3{
   border-radius:10px;
   height: 50vh;
   max-height: 500px;
-  min-width: 10vw;
-  max-width: 15vw;
 }
 
 .project:hover {
@@ -313,5 +319,26 @@ ul{
     -webkit-transform: translateY(-700px) rotate(600deg);
             transform: translateY(-700px) rotate(600deg);
     opacity:0;
+  }
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1000px) {
+  #info-col{
+    max-width: none;
+  }
+  #content{
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "info info info info" "a b c d";
+  }
+}
+
+@media only screen and (max-width: 600px){
+  #content{
+    grid-gap: 1rem;
+    align-content: flex-start;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "info info" "info info" "a b" "c d";
   }
 }
